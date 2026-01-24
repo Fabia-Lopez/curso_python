@@ -2,8 +2,11 @@
 "here goes the game logic for ticatctoe"
 import board
 def check_winner(d:dict, combo_list:list)->bool:
+    """
+    Check if there is a winner
+    """
     for combo in combo_list:
-        if d[combo[0]]== d[combo[1]]== d[combo[2]]:
+        if d[combo[0]] == d[combo[1]] == d[combo[2]]:
             return True
     return False
 
