@@ -2,7 +2,7 @@
 tic tac toe game
 Author: fabian lopez galvez
 """
-from game_logic import game
+#from game_logic import game
 from game_logic import two_players
 from menu import display_menu
 
@@ -22,5 +22,6 @@ def main():
         else:
             print("Invalid choice. Please select a valid option.")
 
+
 if __name__ == "__main__":
-    main()
+    display_menu()
