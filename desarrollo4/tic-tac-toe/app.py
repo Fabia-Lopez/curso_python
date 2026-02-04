@@ -3,7 +3,7 @@ tic tac toe game
 Author: fabian lopez galvez
 """
 #from game_logic import game
-from game_logic import two_players
+from game_logic import play_game
 from menu import display_menu
 
 def main():
@@ -13,9 +13,9 @@ def main():
     while True:
         choice = display_menu()
         if choice == 1:
-            print("One player game is not implemented yet.")
+            play_game(1)
         elif choice == 2:
-            two_players()
+            play_game(2)
         elif choice == 3:
             print("Exiting the game. Goodbye!")
             break
@@ -24,4 +24,4 @@ def main():
 
 
 if __name__ == "__main__":
-    display_menu()
+    main()

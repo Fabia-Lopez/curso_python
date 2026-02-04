@@ -12,7 +12,7 @@ def check_winner(d:dict, combo_list:list)->bool:
             return True
     return False
 
-def game()->str:
+def game(num_players:int)->str:
     """
     Heres lives the main game loop
     """
@@ -30,9 +30,11 @@ def game()->str:
     w_player =""
     while turns< 9 and not winner:
         board.display_board(dboard)
-        valid_move = False
-        while not valid_move:
-            valid_move = board.player_turn (current_player, dboard)
+        if num_players ==1:
+            one_player(current_player, dboard)
+        else:
+            if num_players == 2:
+                two_players(current_player, dboard) 
         turns += 1
         winner=check_winner(dboard, combo_list)
         if winner:
@@ -57,10 +59,8 @@ def play_game(players=2)->None:
         playing = True
         score = {"X": 0, "O": 0, "Ties": 0}
         while playing:
-            if players == 1:
-                winner = game_vs_computer()
-            else:
-                winner = game()
+            
+            winner = game(players)
             if len(winner) > 0:
                 print(f"Winner: Player {winner}")
             else:
@@ -76,7 +76,7 @@ def play_game(players=2)->None:
         playing = True
         score = {"X": 0, "O": 0, "Ties": 0}
         while playing:
-            winner = game()
+            winner = game(2)
             if len(winner) > 0:
                 print(f"Winner: Player {winner}")
             else:
@@ -87,6 +87,27 @@ def play_game(players=2)->None:
             if replay != 'y':
                 playing = False
             print(f"Score: X= {score['X']}, O= {score['O']}, Ties= {score['Ties']}")
+
+def two_players(current_player:str, dboard:dict)->None:
+    valid_move = False
+    while not valid_move:
+            valid_move = board.player_turn (current_player, dboard)
+
+def one_player(current_player:str, dboard:dict)->None:
+    valid_move = False
+    x_player = "X"
+    o_player ="O"
+    if current_player == x_player:
+        while not valid_move:
+            
+            valid_move = board.player_turn (current_player, dboard)
+    else:
+        print("Computer's turn:")
+        while not valid_move:
+            move = random.randint(0, 8)
+            if str(dboard[move]) == str(move):
+                dboard[move] = o_player
+                valid_move = True
 
 def game_vs_computer()->str:
     """
@@ -107,16 +128,7 @@ def game_vs_computer()->str:
     while turns< 9 and not winner:
         board.display_board(dboard)
         valid_move = False
-        if current_player == x_player:
-            while not valid_move:
-                valid_move = board.player_turn (current_player, dboard)
-        else:
-            print("Computer's turn:")
-            while not valid_move:
-                move = random.randint(0, 8)
-                if str(dboard[move]) == str(move):
-                    dboard[move] = o_player
-                    valid_move = True
+        one_player(current_player, dboard)
         turns += 1
         winner=check_winner(dboard, combo_list)
         if winner:
@@ -131,7 +143,5 @@ def game_vs_computer()->str:
 
 
 if __name__=="__main__":
-    play_game(1)
-
-
+    play_game(2)
 
