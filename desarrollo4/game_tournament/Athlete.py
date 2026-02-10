@@ -1,28 +1,28 @@
-"""
-| Athlete class represents an athlete participating in the tournament.|
-"""
-class Athlete:
-    """
-    Athlete class represents an athlete participating in the tournament. 
-    """
+""" | Athlete class representing a player in the tournament. | """
+class  Athlete:
+    """ Athlete class representing a player in the tournament. """
     def __init__(self, name):
-        """custom constructor for the Athlete class."""
+        """ Custom constructor for Athlete class. """
         self.name = name
         self.number=0
-
     def __str__(self):
-        """String representation of the Athlete object."""
+        """ String representation of the Athlete object. """
         return f"Athlete: {self.name}, Number: {self.number}"
-    
     def __repr__(self):
-        """ Official string representation of the Athlete object."""
+        """ Official string representation of the Athlete object. """
         return f"Athlete(name='{self.name}', number={self.number})"
-    
     def set_number(self, number):
-        """Set the athlete's number."""
+        """ Set the athlete's number. """
         self.number = number
-
-if __name__ == "__main__":
+    def to_json(self):
+        """ Convert the Athlete object to a JSON string. """
+        return {
+            "name": self.name,
+            "number": self.number
+        }
+    
+if  __name__ == "__main__":
+    # Example usage
     athlete1 = Athlete("Lionel Messi")
     athlete1.set_number(10)
     print(athlete1)  # Output: Athlete: Lionel Messi, Number: 10
