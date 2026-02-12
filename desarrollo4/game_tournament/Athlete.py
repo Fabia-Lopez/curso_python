@@ -1,4 +1,5 @@
-""" | Athlete class representing a player in the tournament. | """
+""" 
+| Athlete class representing a player in the tournament. | """
 class  Athlete:
     """ Athlete class representing a player in the tournament. """
     def __init__(self, name):
@@ -15,12 +16,12 @@ class  Athlete:
         """ Set the athlete's number. """
         self.number = number
     def to_json(self):
-        """ Convert the Athlete object to a JSON string. """
+        """ Generate json of Athlete"""
         return {
-            "name": self.name,
-            "number": self.number
-        }
-    
+                "name":self.name, 
+                "number":self.number
+                }
+
 if  __name__ == "__main__":
     # Example usage
     athlete1 = Athlete("Lionel Messi")
