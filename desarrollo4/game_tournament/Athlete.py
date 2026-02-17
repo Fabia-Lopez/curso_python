@@ -1,20 +1,26 @@
 """ 
 | Athlete class representing a player in the tournament. | """
+import random
+import json
 class  Athlete:
     """ Athlete class representing a player in the tournament. """
     def __init__(self, name):
         """ Custom constructor for Athlete class. """
         self.name = name
-        self.number=0
+        self.number= random.randint(1,99)
+
     def __str__(self):
         """ String representation of the Athlete object. """
         return f"Athlete: {self.name}, Number: {self.number}"
+
     def __repr__(self):
         """ Official string representation of the Athlete object. """
         return f"Athlete(name='{self.name}', number={self.number})"
+
     def set_number(self, number):
         """ Set the athlete's number. """
         self.number = number
+
     def to_json(self):
         """ Generate json of Athlete"""
         return {

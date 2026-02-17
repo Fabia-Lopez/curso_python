@@ -9,23 +9,23 @@
         "athletes": [
             {
                 "name": "Hugo S\u00e1nchez",
-                "number": 0
+                "number": 35
             },
             {
                 "name": "Jared Borgetti",
-                "number": 0
+                "number": 78
             },
             {
                 "name": "Cuauht\u00e9moc Blanco",
-                "number": 0
+                "number": 38
             },
             {
                 "name": "Luis Hern\u00e1ndez",
-                "number": 0
+                "number": 44
             },
             {
                 "name": "Carlos Vela",
-                "number": 0
+                "number": 19
             }
         ]
     },
@@ -39,23 +39,23 @@
         "athletes": [
             {
                 "name": "Lionel Messi",
-                "number": 0
+                "number": 91
             },
             {
                 "name": "Diego Armando",
-                "number": 0
+                "number": 4
             },
             {
                 "name": "Gabriel Batistuta",
-                "number": 0
+                "number": 58
             },
             {
                 "name": "Sergio Ag\u00fcero",
-                "number": 0
+                "number": 76
             },
             {
                 "name": "\u00c1ngel Di Mar\u00eda",
-                "number": 0
+                "number": 39
             }
         ]
     },
