@@ -1,1 +1,434 @@
-"[\n{'name': 'Mexico', 'sport': {'name': 'Futbol', 'league': 'FIFA', 'num_players': 11}, 'athletes': [{'name': 'Hugo S\u00e1nchez', 'number': 44}, {'name': 'Jared Borgetti', 'number': 45}, {'name': 'Cuauht\u00e9moc Blanco', 'number': 57}, {'name': 'Luis Hern\u00e1ndez', 'number': 16}, {'name': 'Carlos Vela', 'number': 7}]},\n{'name': 'Argentina', 'sport': {'name': 'Futbol', 'league': 'FIFA', 'num_players': 11}, 'athletes': [{'name': 'Lionel Messi', 'number': 2}, {'name': 'Diego Armando', 'number': 92}, {'name': 'Gabriel Batistuta', 'number': 20}, {'name': 'Sergio Ag\u00fcero', 'number': 71}, {'name': '\u00c1ngel Di Mar\u00eda', 'number': 65}]},\n{'name': 'Peru', 'sport': {'name': 'Futbol', 'league': 'FIFA', 'num_players': 11}, 'athletes': [{'name': 'Paolo Guerrero', 'number': 11}, {'name': 'Claudio Pizarro', 'number': 22}, {'name': 'Te\u00f3filo Cubillas', 'number': 20}, {'name': 'Hugo Sotil', 'number': 69}, {'name': 'Roberto Palacios', 'number': 37}]},\n{'name': 'France', 'sport': {'name': 'Futbol', 'league': 'FIFA', 'num_players': 11}, 'athletes': [{'name': 'Kylian Mbapp\u00e9', 'number': 5}, {'name': 'Antoine Griezmann', 'number': 52}, {'name': 'Olivier Giroud', 'number': 11}, {'name': 'Hugo Lloris', 'number': 26}, {'name': 'Rapha\u00ebl Varane', 'number': 10}]},\n{'name': 'Spain', 'sport': {'name': 'Futbol', 'league': 'FIFA', 'num_players': 11}, 'athletes': [{'name': 'Andr\u00e9s Iniesta', 'number': 15}, {'name': 'Xavi Hern\u00e1ndez', 'number': 92}, {'name': 'David Villa', 'number': 41}, {'name': 'Iker Casillas', 'number': 60}, {'name': 'Sergio Ramos', 'number': 86}]},\n{'name': 'Brazil', 'sport': {'name': 'Futbol', 'league': 'FIFA', 'num_players': 11}, 'athletes': [{'name': 'Pel\u00e9', 'number': 72}, {'name': 'Ronaldo Naz\u00e1rio', 'number': 77}, {'name': 'Ronaldinho', 'number': 45}, {'name': 'Neymar Jr.', 'number': 41}, {'name': 'Zico', 'number': 28}]},\n{'name': 'Italia', 'sport': {'name': 'Futbol', 'league': 'FIFA', 'num_players': 11}, 'athletes': [{'name': 'Roberto Baggio', 'number': 68}, {'name': 'Francesco Totti', 'number': 21}, {'name': 'Gianluigi Buffon', 'number': 58}, {'name': 'Paolo Maldini', 'number': 97}, {'name': 'Alessandro Del Piero', 'number': 80}]},\n{'name': 'Japan', 'sport': {'name': 'Futbol', 'league': 'FIFA', 'num_players': 11}, 'athletes': [{'name': 'Hidetoshi Nakata', 'number': 81}, {'name': 'Shinji Kagawa', 'number': 86}, {'name': 'Keisuke Honda', 'number': 96}, {'name': 'Yasuhito Endo', 'number': 82}, {'name': 'Shunsuke Nakamura', 'number': 64}]}\n]"
+[
+    {
+        "name": "Mexico",
+        "sport": {
+            "name": "Futbol",
+            "league": "FIFA",
+            "num_players": 11
+        },
+        "athletes": [
+            {
+                "name": "Chicharito",
+                "number": 8
+            },
+            {
+                "name": "Piojo",
+                "number": 91
+            },
+            {
+                "name": "Guardado",
+                "number": 71
+            },
+            {
+                "name": "Hector Moreno",
+                "number": 77
+            },
+            {
+                "name": "Rafa Marquez",
+                "number": 8
+            },
+            {
+                "name": "Salcido",
+                "number": 40
+            },
+            {
+                "name": "Vela",
+                "number": 96
+            },
+            {
+                "name": "Dos Santos",
+                "number": 14
+            },
+            {
+                "name": "Herrera",
+                "number": 98
+            },
+            {
+                "name": "Layun",
+                "number": 88
+            },
+            {
+                "name": "Corona",
+                "number": 79
+            }
+        ]
+    },
+    {
+        "name": "Argentina",
+        "sport": {
+            "name": "Futbol",
+            "league": "FIFA",
+            "num_players": 11
+        },
+        "athletes": [
+            {
+                "name": "Messi",
+                "number": 71
+            },
+            {
+                "name": "Di Maria",
+                "number": 43
+            },
+            {
+                "name": "Aguero",
+                "number": 56
+            },
+            {
+                "name": "Higuain",
+                "number": 46
+            },
+            {
+                "name": "Mascherano",
+                "number": 44
+            },
+            {
+                "name": "Biglia",
+                "number": 36
+            },
+            {
+                "name": "Dybala",
+                "number": 13
+            },
+            {
+                "name": "Paredes",
+                "number": 81
+            },
+            {
+                "name": "Tagliafico",
+                "number": 13
+            },
+            {
+                "name": "Otamendi",
+                "number": 25
+            },
+            {
+                "name": "Zabaleta",
+                "number": 81
+            }
+        ]
+    },
+    {
+        "name": "Peru",
+        "sport": {
+            "name": "Futbol",
+            "league": "FIFA",
+            "num_players": 11
+        },
+        "athletes": [
+            {
+                "name": "Guerrero",
+                "number": 77
+            },
+            {
+                "name": "Carrillo",
+                "number": 56
+            },
+            {
+                "name": "Flores",
+                "number": 99
+            },
+            {
+                "name": "Yotun",
+                "number": 31
+            },
+            {
+                "name": "Cueva",
+                "number": 45
+            },
+            {
+                "name": "Tapia",
+                "number": 28
+            },
+            {
+                "name": "Advincula",
+                "number": 47
+            },
+            {
+                "name": "Trauco",
+                "number": 83
+            },
+            {
+                "name": "Araujo",
+                "number": 41
+            },
+            {
+                "name": "Garcia",
+                "number": 10
+            },
+            {
+                "name": "Gallese",
+                "number": 52
+            }
+        ]
+    },
+    {
+        "name": "France",
+        "sport": {
+            "name": "Futbol",
+            "league": "FIFA",
+            "num_players": 11
+        },
+        "athletes": [
+            {
+                "name": "Mbappe",
+                "number": 74
+            },
+            {
+                "name": "Griezmann",
+                "number": 98
+            },
+            {
+                "name": "Pogba",
+                "number": 83
+            },
+            {
+                "name": "Kante",
+                "number": 99
+            },
+            {
+                "name": "Varane",
+                "number": 94
+            },
+            {
+                "name": "Lloris",
+                "number": 56
+            },
+            {
+                "name": "Hernandez",
+                "number": 54
+            },
+            {
+                "name": "Pavard",
+                "number": 90
+            },
+            {
+                "name": "Matuidi",
+                "number": 77
+            },
+            {
+                "name": "Dembele",
+                "number": 26
+            },
+            {
+                "name": "Coman",
+                "number": 29
+            }
+        ]
+    },
+    {
+        "name": "Spain",
+        "sport": {
+            "name": "Futbol",
+            "league": "FIFA",
+            "num_players": 11
+        },
+        "athletes": [
+            {
+                "name": "Ramos",
+                "number": 94
+            },
+            {
+                "name": "Iniesta",
+                "number": 11
+            },
+            {
+                "name": "Xavi",
+                "number": 1
+            },
+            {
+                "name": "Pique",
+                "number": 22
+            },
+            {
+                "name": "Busquets",
+                "number": 20
+            },
+            {
+                "name": "Alba",
+                "number": 60
+            },
+            {
+                "name": "Isco",
+                "number": 8
+            },
+            {
+                "name": "Morata",
+                "number": 32
+            },
+            {
+                "name": "Silva",
+                "number": 58
+            },
+            {
+                "name": "Asensio",
+                "number": 88
+            },
+            {
+                "name": "De Gea",
+                "number": 38
+            }
+        ]
+    },
+    {
+        "name": "Brazil",
+        "sport": {
+            "name": "Futbol",
+            "league": "FIFA",
+            "num_players": 11
+        },
+        "athletes": [
+            {
+                "name": "Neymar",
+                "number": 22
+            },
+            {
+                "name": "Coutinho",
+                "number": 14
+            },
+            {
+                "name": "Firmino",
+                "number": 47
+            },
+            {
+                "name": "Casemiro",
+                "number": 98
+            },
+            {
+                "name": "Alisson",
+                "number": 77
+            },
+            {
+                "name": "Thiago Silva",
+                "number": 57
+            },
+            {
+                "name": "Marquinhos",
+                "number": 24
+            },
+            {
+                "name": "Willian",
+                "number": 95
+            },
+            {
+                "name": "Gabriel Jesus",
+                "number": 19
+            },
+            {
+                "name": "Fernandinho",
+                "number": 77
+            },
+            {
+                "name": "Danilo",
+                "number": 57
+            }
+        ]
+    },
+    {
+        "name": "Italia",
+        "sport": {
+            "name": "Futbol",
+            "league": "FIFA",
+            "num_players": 11
+        },
+        "athletes": [
+            {
+                "name": "Buffon",
+                "number": 57
+            },
+            {
+                "name": "Chiellini",
+                "number": 70
+            },
+            {
+                "name": "Bonucci",
+                "number": 89
+            },
+            {
+                "name": "Donnarumma",
+                "number": 50
+            },
+            {
+                "name": "Insigne",
+                "number": 98
+            },
+            {
+                "name": "Bernardeschi",
+                "number": 5
+            },
+            {
+                "name": "Verratti",
+                "number": 64
+            },
+            {
+                "name": "Jorginho",
+                "number": 32
+            },
+            {
+                "name": "Chiesa",
+                "number": 13
+            },
+            {
+                "name": "Belotti",
+                "number": 41
+            },
+            {
+                "name": "Immobile",
+                "number": 7
+            }
+        ]
+    },
+    {
+        "name": "Japan",
+        "sport": {
+            "name": "Futbol",
+            "league": "FIFA",
+            "num_players": 11
+        },
+        "athletes": [
+            {
+                "name": "Kagawa",
+                "number": 89
+            },
+            {
+                "name": "Honda",
+                "number": 53
+            },
+            {
+                "name": "Okazaki",
+                "number": 40
+            },
+            {
+                "name": "Nagatomo",
+                "number": 71
+            },
+            {
+                "name": "Yoshida",
+                "number": 41
+            },
+            {
+                "name": "Hasebe",
+                "number": 91
+            },
+            {
+                "name": "Inui",
+                "number": 22
+            },
+            {
+                "name": "Shibasaki",
+                "number": 88
+            },
+            {
+                "name": "Kawashima",
+                "number": 2
+            },
+            {
+                "name": "Muto",
+                "number": 41
+            },
+            {
+                "name": "Osako",
+                "number": 14
+            }
+        ]
+    }
+]
