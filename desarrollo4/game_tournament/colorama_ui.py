@@ -14,7 +14,7 @@ class ColoramaUI:
     def run (self):
         """ Run the colorama ui """
         colorama.init(autoreset=True)
-        self.show_menu()
+        self.display_menu()
     def show_menu(self):
         """ Show the menu """
         while True:
@@ -26,17 +26,17 @@ class ColoramaUI:
             if choice == "1":
                 file_path = input("Engter the path to the JSON file: ")
                 self.set_current_file(file_path)
-                self.open_tournament(file_path)
+                self.open_tournament()
             elif choice == "2":
                 self.display_tournament()
             elif choice == "3":
                 self.exit_app()
             else:
                 print("Invalid choice. Please try again.")
-    def open_tournament(self, file_path: str):
+    def open_tournament(self):
         """ Open tournament from JSON file """
         self.tournament = Tournament("Tournament")
-        self.tournament.load_json(file_path)
+        self.tournament.load_json(self.current_file)
     def display_tournament(self):
         """ Display tournament """
         # clear screen
@@ -53,7 +53,35 @@ class ColoramaUI:
         """ Exit the application """
         print("Exiting application...")
         exit()
+    def get_tournament_json(self):
+        """ Get tournament JSON file path from user input """
+        file_path = input("Enter the path to the JSON file: ")
+        self.set_current_file(file_path)
+        self.open_tournament()
+    def display_menu(self):
+        """show the menu"""
+        dictionary_menu={
+            "1": "Load Tournament",
+            "2": "Display tournament",
+            "3": "Exit"
+        }
+        action_dictionary ={
+            "1": self.get_tournament_json,
+            "2": self.display_tournament,
+            "3": self.exit_app
+        }
+        while True:
+            print("\nTournament")
+            for key in sorted(dictionary_menu.keys()):
+                print(f"{key}. {dictionary_menu[key]}")
+            choice = input("Enter your choice: ")
+            if choice in action_dictionary:
+                action_dictionary[choice]()
+            else:
+                print("Invalid choice. Please try again.")
 
 if __name__ == "__main__":
     ui = ColoramaUI()
+    ui.set_current_file("tournament.json")
+    ui.open_tournament()
     ui.run()
