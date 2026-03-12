@@ -38,6 +38,15 @@ class Game:
             0, Sport.max_score[self.team_a.sport.name])
         self.score[self.team_b.name] = random.randint(
             0, Sport.max_score[self.team_b.sport.name])
+        if self.score[self.team_a.name] > self.score[self.team_b.name]:
+            self.winner = self.team_a
+            self.loser = self.team_b
+        elif self.score[self.team_a.name] < self.score[self.team_b.name]:
+            self.winner = self.team_b
+            self.loser = self.team_a
+        else:
+            self.winner = None
+            self.loser = None
 
     def __str__(self):
         """ String representation of the Game class. """
@@ -61,12 +70,12 @@ class Game:
 def a_game():
     """ Example usage of the Game class. """
     players_mex = ['Chicharito', 'Piojo', 'Guardado',
-                   'Hector Moreno',
-                   'Rafa Marquez', 'Salcido', 'Vela', 'Dos Santos', 'Herrera', 'Layun', 'Corona']
+                    'Hector Moreno',
+                    'Rafa Marquez', 'Salcido', 'Vela', 'Dos Santos', 'Herrera', 'Layun', 'Corona']
     players_arg = ['Messi', 'Di Maria',
-                   'Aguero', 'Higuain',
-                   'Mascherano',
-                   'Biglia', 'Dybala', 'Paredes', 'Tagliafico', 'Otamendi', 'Zabaleta']
+                    'Aguero', 'Higuain',
+                    'Mascherano',
+                    'Biglia', 'Dybala', 'Paredes', 'Tagliafico', 'Otamendi', 'Zabaleta']
     sport = Sport("Futbol", 11, "FIFA")
     team_mex = Team("Mexico", sport)
     team_arg = Team("Argentina", sport)
@@ -88,24 +97,24 @@ def save_game_to_json(game_data, filename):
 def a_tournament():
     """ Example usage of the Game class. """
     players_mex = ['Chicharito', 'Piojo', 'Guardado', 'Hector Moreno',
-                   'Rafa Marquez', 'Salcido', 'Vela', 'Dos Santos', 'Herrera', 'Layun', 'Corona']
+                    'Rafa Marquez', 'Salcido', 'Vela', 'Dos Santos', 'Herrera', 'Layun', 'Corona']
     players_arg = ['Messi', 'Di Maria', 'Aguero', 'Higuain', 'Mascherano',
-                   'Biglia', 'Dybala', 'Paredes', 'Tagliafico', 'Otamendi', 'Zabaleta']
+                    'Biglia', 'Dybala', 'Paredes', 'Tagliafico', 'Otamendi', 'Zabaleta']
     players_peru = ['Guerrero', 'Carrillo', 'Flores', 'Yotun', 'Cueva',
                     'Tapia', 'Advincula', 'Trauco', 'Araujo', 'Garcia', 'Gallese']
     players_france = ['Mbappe', 'Griezmann', 'Pogba', 'Kante', 'Varane',
-                      'Lloris', 'Hernandez', 'Pavard', 'Matuidi', 'Dembele', 'Coman']
+                    'Lloris', 'Hernandez', 'Pavard', 'Matuidi', 'Dembele', 'Coman']
     players_spain = ['Ramos', 'Iniesta', 'Xavi', 'Pique', 'Busquets',
-                     'Alba', 'Isco', 'Morata', 'Silva', 'Asensio', 'De Gea']
+                    'Alba', 'Isco', 'Morata', 'Silva', 'Asensio', 'De Gea']
     players_brazil = ['Neymar', 'Coutinho',
-                      'Firmino',
-                      'Casemiro', 'Alisson',
-                      'Thiago Silva', 'Marquinhos',
-                      'Willian', 'Gabriel Jesus', 'Fernandinho', 'Danilo']
+                    'Firmino',
+                    'Casemiro', 'Alisson',
+                    'Thiago Silva', 'Marquinhos',
+                    'Willian', 'Gabriel Jesus', 'Fernandinho', 'Danilo']
     players_italia = ['Buffon', 'Chiellini', 'Bonucci', 'Donnarumma', 'Insigne',
-                      'Bernardeschi', 'Verratti', 'Jorginho', 'Chiesa', 'Belotti', 'Immobile']
+                    'Bernardeschi', 'Verratti', 'Jorginho', 'Chiesa', 'Belotti', 'Immobile']
     players_japan = ['Kagawa', 'Honda', 'Okazaki', 'Nagatomo', 'Yoshida',
-                     'Hasebe', 'Inui', 'Shibasaki', 'Kawashima', 'Muto', 'Osako']
+                    'Hasebe', 'Inui', 'Shibasaki', 'Kawashima', 'Muto', 'Osako']
     sport = Sport("Futbol", 11, "FIFA")
     team_mex = Team("Mexico", sport)
     team_arg = Team("Argentina", sport)
@@ -138,5 +147,6 @@ def a_tournament():
 
 if __name__ == "__main__":
     string_game = a_tournament()
+    print(string_game)
     save_game_to_json(string_game, "tournament.json")
     print(string_game)
