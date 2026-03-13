@@ -9,7 +9,7 @@ def cargar_csv(nombre_archivo):
             datos.append(fila)
     return datos
 
-def crear_animales():
+def cargar_animales():
     datos = cargar_csv("zoo.csv")
 
     encabezados = datos [0][1:-1]
