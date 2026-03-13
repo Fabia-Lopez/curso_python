@@ -1,29 +1,45 @@
 import csv
 from animal import Animal
 
+
+# cargar csv
 def cargar_csv(nombre_archivo):
+
     datos = []
+
     with open(nombre_archivo, newline='', encoding='utf-8') as f:
         lector = csv.reader(f)
+
         for fila in lector:
             datos.append(fila)
+
     return datos
 
-def cargar_animales():
-    datos = cargar_csv("zoo.csv")
 
-    encabezados = datos [0][1:-1]
+# cargar animales
+def cargar_animales():
+
+    datos = cargar_csv("zoologico/zoo.csv")
+
+    encabezados = datos[0][1:-1]
+
     animales = []
+
     for fila in datos[1:]:
+
         nombre = fila[0]
         caracteristicas = list(map(int, fila[1:-1]))
         clase = int(fila[-1])
 
         animales.append(Animal(nombre, caracteristicas, clase))
+
     return animales, encabezados
 
+
+# cargar clases
 def cargar_clases():
-    datos = cargar_csv("clases.csv")
+
+    datos = cargar_csv("zoologico/clases.csv")
 
     clases = {}
 
@@ -32,13 +48,20 @@ def cargar_clases():
 
     return clases
 
+
+# guardar csv
 def guardar_animales(animales, encabezados):
-    with open("zoo.csv", "w", newline='', encoding='utf-8') as f:
+
+    with open("zoologico/zoo.csv", "w", newline='', encoding="utf-8") as f:
+
         escritor = csv.writer(f)
-        escritor.writerow(["nombre_animal"] + encabezados + ["Clase"])
+
+        escritor.writerow(["nombre_animal"] + encabezados + ["clase"])
+
         for a in animales:
-            fila= ([a.nombre] + a.caracteristicas + [a.clase])
+            fila = [a.nombre] + a.caracteristicas + [a.clase]
             escritor.writerow(fila)
+
 
 # menu
 def menu():
@@ -50,6 +73,7 @@ def menu():
     print("4. Salir")
 
     return input("Seleccione opción: ")
+
 
 # listar por clase
 def listar_por_clase(animales, clases):
@@ -67,12 +91,14 @@ def listar_por_clase(animales, clases):
         if a.clase == seleccion:
             print(a.nombre)
 
+
+# listar por característica
 def listar_por_caracteristica(animales, encabezados):
 
     print("\nCaracterísticas disponibles:")
 
-    for i, nombre in enumerate(encabezados):
-        print(i, "-", nombre)
+    for i, c in enumerate(encabezados):
+        print(i, "-", c)
 
     seleccion = int(input("Seleccione característica: "))
 
@@ -82,6 +108,8 @@ def listar_por_caracteristica(animales, encabezados):
         if a.caracteristicas[seleccion] == 1:
             print(a.nombre)
 
+
+# agregar animal
 def agregar_animal(animales, encabezados, clases):
 
     nombre = input("Nombre del animal: ")
@@ -106,4 +134,3 @@ def agregar_animal(animales, encabezados, clases):
     animales.append(nuevo)
 
     print("Animal agregado correctamente")
-
