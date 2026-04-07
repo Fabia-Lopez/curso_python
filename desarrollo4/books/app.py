@@ -11,7 +11,7 @@ book_dict = create_book_dictionary(books)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('new_index.html')
 
 @app.route('/search_by_author', methods=['GET', 'POST'])
 def search_by_author():
@@ -21,12 +21,31 @@ def search_by_author():
         return render_template('search_by_author.html', books_list=books_list)
     else:
         return render_template('search_by_author.html', books_list=books[:10])
+    
+@app.route('/search_by_title', methods=['GET', 'POST'])
+def search_by_title():
+    if request.method == 'POST':
+        title = request.form['title']
+        books_list = [book for book in books if title.lower() in book.title.lower()]
+        return render_template('search_by_title.html', books_list=books_list)
+    else:
+        return render_template('search_by_title.html', books_list=books[:10])
 
+@app.route('/genre', methods=['GET', 'POST'])
+def browse_by_genre():
+    if request.method == 'POST':
+        genre = request.form['genre']
+        books_list = [book for book in books if genre.lower() in book.genre.lower()]
+        return render_template('browse_by_genre.html', books_list=books_list)
+    else:
+        return render_template('browse_by_genre.html', books_list=books[:10])
 
-@app.route('/book/<string:book_id>')
+@app.route('/book/<book_id>')
 def book_detail(book_id):
     book = book_dict.get(book_id)
-    return render_template('book_detail.html', book=book)
+    #print(book)
+    return render_template('card.html', book=book)
 
+        
 if __name__ == '__main__':
     app.run(debug=True)
