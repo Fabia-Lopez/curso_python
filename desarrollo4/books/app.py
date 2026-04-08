@@ -31,14 +31,14 @@ def search_by_title():
     else:
         return render_template('search_by_title.html', books_list=books[:10])
 
-@app.route('/genre', methods=['GET', 'POST'])
-def browse_by_genre():
+@app.route('/browse_by_year', methods=['GET', 'POST'])
+def browse_by_year():
     if request.method == 'POST':
-        genre = request.form['genre']
-        books_list = [book for book in books if genre.lower() in book.genre.lower()]
-        return render_template('browse_by_genre.html', books_list=books_list)
+        year = request.form['year']
+        books_list = [book for book in books if year in str(book.year)]
+        return render_template('browse_by_year.html', books_list=books_list)
     else:
-        return render_template('browse_by_genre.html', books_list=books[:10])
+        return render_template('browse_by_year.html', books_list=books[:10])
 
 @app.route('/book/<book_id>')
 def book_detail(book_id):

@@ -9,6 +9,7 @@ class Book:
         self.author = author
         self.genre_id = int(genre_id)
         self.genre = genre
+        
 
     def __str__(self):
         return f"{self.title:<50} - {self.author:<20} - {self.genre}"
